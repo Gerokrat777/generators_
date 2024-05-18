@@ -1,0 +1,16 @@
+
+def all_variants(abc):
+    for i in str('abc'):
+        yield i
+        for start in range(len(abc)):
+            for end in range(start+1, len(abc)+1):
+                yield abc[start:end]
+               
+
+for substr in all_variants('abc'):
+    print(substr)
+
+all_ = all_variants('abc')
+print(all_)
+for i in all_:
+    print(i)
